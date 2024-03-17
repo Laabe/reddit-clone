@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: reddit
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: secret
+      database: reddit
+      port: 27018
+      host: localhost
+      auto-index-creation: true
+    mail:
+      host: sandbox.smtp.mailtrap.io
+      port: 2525
+      username: 119422e22122ae
+      password: 4370c2a7a465eb
+      protocol: smtp
