@@ -1,20 +1,23 @@
-package com.reddit.subreddit;
+package com.reddit.user.model;
 
-import com.reddit.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
+
 @Data
 @Builder
 @Document
 @NoArgsConstructor
 @AllArgsConstructor
-public class Subreddit {
+public class User {
     private Long id;
-    private String name;
-    private String description;
-    private User createdBy;
+    private String email;
+    private String username;
+    private String password;
+    private Boolean enabled;
+    private LocalDateTime createdBy;
 }

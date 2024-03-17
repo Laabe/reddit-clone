@@ -1,5 +1,6 @@
-package com.reddit.user;
+package com.reddit.subreddit.model;
 
+import com.reddit.user.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,11 +14,10 @@ import java.time.LocalDateTime;
 @Document
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Subreddit {
     private Long id;
-    private String email;
-    private String username;
-    private String password;
-    private Boolean enabled;
-    private LocalDateTime createdDate;
+    private String name;
+    private String description;
+    private LocalDateTime createdAt;
+    private User createdBy;
 }
