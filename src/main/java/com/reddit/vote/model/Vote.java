@@ -1,23 +1,22 @@
-package com.reddit.user;
+package com.reddit.vote.model;
 
+import com.reddit.post.model.Post;
+import com.reddit.user.model.User;
+import com.reddit.vote.enums.VoteType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDateTime;
-
 @Data
 @Builder
 @Document
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Vote {
     private Long id;
-    private String email;
-    private String username;
-    private String password;
-    private Boolean enabled;
-    private LocalDateTime createdDate;
+    private VoteType voteType;
+    private Post post;
+    private User createdBy;
 }
