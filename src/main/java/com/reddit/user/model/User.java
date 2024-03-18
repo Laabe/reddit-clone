@@ -14,10 +14,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
-    private Long id;
+    private String id;
     private String email;
     private String username;
     private String password;
-    private Boolean enabled;
-    private LocalDateTime createdBy;
+    private Boolean enabled = false;
+    private LocalDateTime createdAt = LocalDateTime.now();
 }
