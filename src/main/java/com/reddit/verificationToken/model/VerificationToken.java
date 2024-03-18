@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class VerificationToken {
-    private Long id;
+    private String id;
     private String token;
     private User user;
     private LocalDateTime expireAt;
