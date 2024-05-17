@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 public class MailService {
     private final JavaMailSender javaMailSender;
     private final MailContentBuilder mailContentBuilder;
+
     @Async
     public void sendMail(NotificationEmail notificationEmail) throws SpringRedditException {
         MimeMessagePreparator messagePreparator = mimeMessage -> {
